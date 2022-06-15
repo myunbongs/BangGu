@@ -67,11 +67,7 @@ def mfcc_spectrogram_prediction(wave_file_path, models_path):
     print('Using {} device'.format(device))
 
     model = CNNet().to(device)
-
-    # if isinstance(model, nn.DataParallel):
-    #     model.module.load_state_dict(torch.load(models_path))
-    # else:
-    #     model.load_state_dict(torch.load(models_path))
+    model = torch.load(models_path)
 
     model.eval()
 

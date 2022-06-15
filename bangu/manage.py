@@ -20,4 +20,5 @@ def main():
 
 if __name__ == '__main__':
     from audio.pitch_lstm_ensemble import RNN
+    from audio.mfcc_cnn import CNNet
     main()
